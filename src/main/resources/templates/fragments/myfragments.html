@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>My Template</title>
+    
+    
+   <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js  ></script>
+    
+ <script src=https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js ></script>
+
+<script src=https://code.jquery.com/jquery-3.4.1.slim.min.js 
+></script>
+
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js></script>
+    
+
+<link type="text/css"   rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css}">
+   
+<link type="text/css" rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css}" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link type="text/css"  rel="stylesheet" th:href="@{https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css}">
+<link type="text/css" rel="stylesheet"   th:href="@{/css/main.css}"/>
+
+    
+</head>
+<body>
+    <!-- Script in body -->
+    <script type="text/javascript" th:src="@{/script-in-body.js}"></script>
+    <ul th:fragment="my-fragment1">
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/products}">Products</a></li>
+        <li><a th:href="@{/about}">About</a></li>
+    </ul>
+    <ul th:fragment="my-fragment2">
+        <li><a th:href="@{/admin/products}">Product Management</a></li>
+        <li><a th:href="@{/admin/orders}">Order Management</a></li>
+    </ul>
+    <div id = "my-id1">
+         Element DIV with id = 'my-id1'
+    </div>
+    <aside>
+        <div>This is a sidebar</div>
+    </aside>
+    <p class="my-class">Element P with class (my-class)</p>
+    <p>Element P without class</p>
+    <p class="my-class">Element P with class (my-class)</p>
+</body>
+</html>
